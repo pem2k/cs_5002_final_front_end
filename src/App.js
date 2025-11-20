@@ -10,9 +10,10 @@ import Cipher from "./pages/Cipher.jsx";
 function App() {
   return (
     <div>
-      <Navbar/>
+      
       <main>
         <Router>
+          <Navbar/>
           <Routes>
             <Route path ="/" element={<Home />}/>
             <Route path ="/Inverse" element ={<Inverse />}/>

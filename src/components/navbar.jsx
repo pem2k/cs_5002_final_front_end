@@ -7,7 +7,7 @@ export default function Navbar() {
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/Inverse">Inverse</Link></li>
-        <li><Link to="/Ciper">Cipher</Link></li>
+        <li><Link to="/Cipher">Cipher</Link></li>
       </ul>
     </nav>
   );
