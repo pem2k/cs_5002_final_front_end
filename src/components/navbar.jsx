@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className = "navbar navbar-dark bg-dark">
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/Inverse">Inverse</Link></li>

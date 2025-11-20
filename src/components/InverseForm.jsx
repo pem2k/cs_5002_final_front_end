@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WorkShower from "./WorkShower";
 
 export default function InverseForm(){
     return(
@@ -10,6 +11,7 @@ export default function InverseForm(){
         <form action={submit_handler}>
             <input name="number" placeholder="Number" />
             <input name="mod" placeholder="Modulus"/>
+            <br/>
             <button type="submit">Calculate</button>
         </form>
 )
@@ -17,5 +19,6 @@ export default function InverseForm(){
 
 const submit_handler = (event) => {
     event.preventDefault();
-    // axios call to backend here
+    // axios call to backend here, this will populate 
+    // the work shower which will include the result
 }
