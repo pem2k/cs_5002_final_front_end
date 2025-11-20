@@ -1,6 +1,6 @@
 /*import React, { useState } from "react";
 
-export default function Inverse_form_result(){
+export default function InverseFormResult(){
     const [number_input, set_number_input] = useState("");
     const [mod_input, set_mod_input] = useState("");
     const [steps, set_steps] = useState([]);
