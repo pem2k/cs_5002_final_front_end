@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './components/Navbar.jsx';
 import Home from "./pages/Home.jsx";
 import Inverse from "./pages/Inverse.jsx";
-import Cipher from "./pages/Cipher.jsx";
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
           <Routes>
             <Route path ="/" element={<Home />}/>
             <Route path ="/Inverse" element ={<Inverse />}/>
-            <Route path = "/Cipher" element={<Cipher />}/>
           </Routes>
         </Router>
     </main>
