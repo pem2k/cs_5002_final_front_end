@@ -17,7 +17,7 @@ export default function InverseForm(){
                         <input name="mod" placeholder="Modulus" className = "form-control bg-dark text-light text-center mt-2"/>
                         <div className=" d-flex justify-content-center">
                             <br/>
-                            <button type="submit" className="btn btn-dark btn-text mt-2 ">Calculate</button>
+                            <button type="submit" className="btn btn-dark btn-text mt-3 ">Calculate</button>
                         </div>
                     </form>
                 </div>

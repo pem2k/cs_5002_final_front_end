@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './components/Navbar.jsx';
 import Home from "./pages/Home.jsx";
 import Inverse from "./pages/Inverse.jsx";
+import Carousel from './components/Carousel.jsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Router>
           <Navbar/>
+          <Carousel/>
           <Routes>
             <Route path ="/" element={<Home />}/>
             <Route path ="/Inverse" element ={<Inverse />}/>
