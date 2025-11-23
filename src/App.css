@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.form-control.bg-dark.text-light::placeholder {
+  color: #FFFFFF8C;
+  opacity: 1;
+}
+
+.btn-dark.btn-txt {
+  color: #FFFFFF8C !important;
+}
