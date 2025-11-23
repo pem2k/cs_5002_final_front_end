@@ -8,14 +8,14 @@ export default function InverseForm(){
     /*const [steps, set_steps] = useState([]);
     const [result, set_result] = useState("")*/
 
-    const submit_handler = (event) => {
+    const submitHandler = (event) => {
         event.preventDefault();
 
         const userSubmission ={
             number: numberInput,
             mod: modInput,
         }
-        
+
         console.log(userSubmission)
 
         axios({
@@ -31,7 +31,7 @@ export default function InverseForm(){
         <div className="container d-flex">
             <div className= "container">
                 <div className=" container">
-                    <form onSubmit={submit_handler}>
+                    <form onSubmit={submitHandler}>
                         <input name="number" placeholder="Number" className = "form-control bg-dark text-light text-center mt-2" onChange={(event) => setNumberInput(event.target.value)} />
                         <input name="mod" placeholder="Modulus" className = "form-control bg-dark text-light text-center mt-2" onChange={(event) => setModInput(event.target.value)}/>
                         <div className=" d-flex justify-content-center">
