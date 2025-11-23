@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function WorkShower(){
+export default function WorkShower({ work }){
     return(
-        <div>Placeholder</div>
+        <div>{work}</div>
     )
 }
