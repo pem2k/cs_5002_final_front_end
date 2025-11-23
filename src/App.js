@@ -11,7 +11,6 @@ import Carousel from './components/Carousel.jsx';
 function App() {
   return (
     <div>
-      
       <main>
         <Router>
           <Navbar/>

@@ -1,9 +1,10 @@
 import React from "react"
 
+// considering writeup of entire project on web side, render latex with: https://www.npmjs.com/package/react-latex-next
 
 export default function Home(){
     return(
-        <div className="">
+        <div className="mt-2">
             <div className=" container">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at ipsum quis sem condimentum finibus. Proin pretium non lacus eu lacinia. In id elementum ipsum. Nam consequat faucibus arcu at sagittis. Donec vitae nisl a felis efficitur congue nec nec dui. Duis interdum nibh dui, vitae porttitor orci consectetur at. Maecenas posuere condimentum scelerisque. Quisque molestie molestie gravida. In hac habitasse platea dictumst. Etiam vel odio eget libero tempus feugiat. Donec semper justo nec nulla dapibus, et molestie est rutrum.

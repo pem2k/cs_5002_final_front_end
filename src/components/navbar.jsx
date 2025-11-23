@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className = "container justify-content-center">
         <ul className = "navbar-nav d-flex flex-row">
           <li className="nav-item mx-3"><Link to="/" className="nav-link">Home</Link></li>
-          <li className="nav-item mx-3"><Link to="/Inverse" className="nav-link">Inverse</Link></li>
+          <li className="nav-item mx-3"><Link to="/Inverse" className="nav-link">Inversion Calculator</Link></li>
         </ul>
       </div>
     </nav>
