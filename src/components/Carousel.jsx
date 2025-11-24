@@ -10,7 +10,7 @@ export default function Carousel() {
                     <div className="carousel-item active h-25">
                         <div className="jumbotron jumbotron-fluid">
                             <div className="container">
-                                <h1 className="display-4">Inverting Modulus and Decoding Linear Ciphers</h1>
+                                <h1 className="display-4">Inverting Modulus</h1>
                                 <p className="lead">Arsh Singh, Oksana Pooley, Parker McKillop</p>
                             </div>
                         </div>

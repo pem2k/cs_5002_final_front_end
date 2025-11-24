@@ -57,3 +57,11 @@ html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 } 
+
+.workShowerContainer{
+  min-width: 80ch
+}
+
+.field-limiter {
+  max-width: 80ch
+}
