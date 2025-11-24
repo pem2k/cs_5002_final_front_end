@@ -14,12 +14,12 @@ export default function InverseForm(){
         event.preventDefault();
 
         const userSubmission ={
-            number: numberInput,
-            mod: modInput,
+            number: Number(numberInput),
+            mod: Number(modInput),
         }
 
         if (!userSubmission.number || !userSubmission.mod ){
-            setSteps(["Error, you must provide a number and a modulus"])
+            setSteps(["Error, you must provide a numeric number and modulus"])
             return
         }
             
@@ -57,7 +57,7 @@ export default function InverseForm(){
                 </div>
             </div>
         </div>
-        <div className="d-flex flex-column align-items-center mt-1">
+        <div className="d-flex flex-column align-items-center mt-2">
                 {steps.map((work, i) => (
                     <WorkShower key={work + i} work={work} />
                 ))}
