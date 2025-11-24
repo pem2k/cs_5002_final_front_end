@@ -18,22 +18,29 @@ export default function InverseForm(){
             mod: modInput,
         }
 
-        // setSteps(exampleResponse)
-        axios({
-            method: "post",
-            url: "http://localhost:5000/",
-            data: userSubmission
-        }).then(response => {
-            console.log(response.data.works)
-
-            if (typeof response.data.works ==="string"){
-                setSteps([response.data.works])
-            }
-            else{
-                setSteps(response.data.works)
-            }
+        if (!userSubmission.number || !userSubmission.mod ){
+            setSteps(["Error, you must provide a number and a modulus"])
+            return
+        }
             
-        }).catch(error=> console.error("error:", error))
+        else{
+            axios({
+                method: "post",
+                url: "http://localhost:5000/",
+                data: userSubmission
+            }).then(response => {
+                const works = response.data.works
+                console.log(works)
+                
+                if (typeof works ==="string"){
+                    setSteps([works])
+                }
+                else{
+                    setSteps(works)
+                }
+
+            }).catch(error=> console.error("error:", error))
+        }
     }
 
     return(
@@ -52,7 +59,7 @@ export default function InverseForm(){
         </div>
         <div className="d-flex flex-column align-items-center mt-1">
                 {steps.map((work, i) => (
-                    <WorkShower key={i} work={work} />
+                    <WorkShower key={work + i} work={work} />
                 ))}
             </div>
         </div>
