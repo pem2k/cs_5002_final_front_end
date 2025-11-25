@@ -41,7 +41,7 @@ export default function InverseForm(){
 
             }).catch(error=> console.error("error:", error))
             }
-    }
+        }
 
     return(
         <div><div className="container d-flex field-limiter">
@@ -57,11 +57,13 @@ export default function InverseForm(){
                 </div>
             </div>
         </div>
+        <div className="">
         <div className="d-flex flex-column align-items-center mt-2">
                 {steps.map((work, i) => (
                     <WorkShower key={work + i} work={work} />
                 ))}
             </div>
+        </div>
         </div>
 )
 }
