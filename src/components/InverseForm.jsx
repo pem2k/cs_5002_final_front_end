@@ -31,7 +31,7 @@ export default function InverseForm(){
         else{
             axios({
                 method: "post",
-                url: "http://localhost:5000/",
+                url: "https://modulo-inverse-api-ad08dd8371c5.herokuapp.com/",
                 data: userSubmission
             }).then(response => {
                 const works = response.data.works
