@@ -9,7 +9,7 @@ export default function InverseForm(){
     const [modInput, setModInput] = useState("");
     const [steps, setSteps] = useState([])
     
-
+    const dashes = "--------------------------------------------------------------------------------"
     const submitHandler = (event) => {
         event.preventDefault();
 
@@ -18,8 +18,13 @@ export default function InverseForm(){
             mod: Number(modInput),
         }
 
+        if (userSubmission.number < 0 || userSubmission.mod <0){
+            setSteps([dashes,"Error, you must provide a positive numeric value for the number and modulus", dashes])
+            return
+        }
+
         if (!userSubmission.number || !userSubmission.mod ){
-            setSteps(["Error, you must provide a numeric number and modulus"])
+            setSteps([dashes,"Error, you must provide a positive numeric value for the number and modulus", dashes])
             return
         }
             
@@ -32,7 +37,7 @@ export default function InverseForm(){
                 const works = response.data.works
                     
                 if (typeof works ==="string"){
-                    setSteps([works])
+                    setSteps([dashes,works,dashes])
                 }
 
                 else{
@@ -57,14 +62,14 @@ export default function InverseForm(){
                 </div>
             </div>
         </div>
-        <div className="">
+
         <div className="d-flex flex-column align-items-center mt-2">
                 {steps.map((work, i) => (
                     <WorkShower key={work + i} work={work} />
                 ))}
             </div>
         </div>
-        </div>
+       
 )
 }
 
