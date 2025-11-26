@@ -18,7 +18,7 @@ export default function InverseForm(){
             mod: Number(modInput),
         }
 
-        if (userSubmission.number < 0 || userSubmission.mod <0){
+        if (userSubmission.number < 0 || userSubmission.mod < 0){
             setSteps([dashes,"Error, you must provide a positive numeric value for the number and modulus", dashes])
             return
         }
