@@ -54,7 +54,7 @@ export default function InverseForm(){
             <div>
                 <div >
                         <form onSubmit={submitHandler} className="container">
-                            <div className="form-floating">
+                            <div className="form-floating mb-2">
                                 <input 
                                     name="number"
                                     placeholder=" "
@@ -64,7 +64,7 @@ export default function InverseForm(){
                                 <label htmlFor="Number">Number</label>
                             </div>
 
-                            <div className="form-floating mb-3">
+                            <div className="form-floating mb-2">
                                 <input 
                                     name="mod" 
                                     placeholder=" " 
