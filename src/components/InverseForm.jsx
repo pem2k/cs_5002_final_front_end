@@ -49,16 +49,37 @@ export default function InverseForm(){
         }
 
     return(
-        <div><div className="container d-flex field-limiter">
-            <div className="container">
-                <div className=" container">
-                    <form onSubmit={submitHandler} className="container">
-                        <input name="number" placeholder="Number" className="form-control bg-dark text-light text-center mt-2" onChange={(event) => setNumberInput(event.target.value)} />
-                        <input name="mod" placeholder="Modulus" className="form-control bg-dark text-light text-center mt-2" onChange={(event) => setModInput(event.target.value)} />
-                        <div className=" d-flex justify-content-center">
-                            <button type="submit" className="btn btn-dark btn-text mt-3 ">Calculate</button>
-                        </div>
-                    </form>
+        <div>
+            <div className="d-flex justify-content-center align-items-center">
+            <div>
+                <div >
+                        <form onSubmit={submitHandler} className="container">
+                            <div className="form-floating">
+                                <input 
+                                    name="number"
+                                    placeholder=" "
+                                    className="form-control"
+                                    id="Number"onChange={(event) => setNumberInput(event.target.value)} />
+
+                                <label htmlFor="Number">Number</label>
+                            </div>
+
+                            <div className="form-floating mb-3">
+                                <input 
+                                    name="mod" 
+                                    placeholder=" " 
+                                    className="form-control" 
+                                    id="Modulo" 
+                                    onChange={(event) => setModInput(event.target.value)} />
+
+                                <label htmlFor="Modulo">Modulo</label>
+
+                            </div>
+
+                            <div className=" d-flex justify-content-center">
+                                <button type="submit" className="btn btn-dark btn-text">Calculate</button>
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>
