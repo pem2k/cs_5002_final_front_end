@@ -14,21 +14,30 @@ export default function InverseForm(){
     const dashes = "--------------------------------------------------------------------------------"
 
     const btnLinks = (
-        <div>
+  <div>
             <div className="mb-3">
                 <pre style={{ fontFamily: "monospace" }}>{dashes}</pre>
-        </div>
-        <a href="https://en.wikipedia.org/wiki/Modular_multiplicative_inverse" target="_blank" rel="noreferrer">
-            <div className="text-center">
-                <button className="btn btn-dark btn-text mt-0 mb-2 fade-in">Euclidean Algorithm</button>
             </div>
-        </a>
+              <div className="mb-3">
+                <pre style={{ fontFamily: "monospace" }}>Resources</pre>
+            </div>
+            <div className="mb-3">
+                <pre style={{ fontFamily: "monospace" }}>{dashes}</pre>
+            </div>
+            <div className="d-flex gap-3 justify-content-center">
             <a href="https://en.wikipedia.org/wiki/Modular_multiplicative_inverse" target="_blank" rel="noreferrer">
-                <div className="text-center">
+                <div className="text-left">
+                    <button className="btn btn-dark btn-text mt-0 mb-2 fade-in">Euclidean Algorithm</button>
+                </div>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Modular_multiplicative_inverse" target="_blank" rel="noreferrer">
+                <div className="text-left">
                     <button className="btn btn-dark btn-text mt-0 mb-2 fade-in">Modular Multiplicative Inverse</button>
                 </div>
             </a>
-        </div>)
+            </div>
+        </div>
+    )
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -51,7 +60,8 @@ export default function InverseForm(){
         else{
             axios({
                 method: "post",
-                url: "https://modulo-inverse-api-ad08dd8371c5.herokuapp.com/", //http://localhost:5000,
+                url: "https://modulo-inverse-api-ad08dd8371c5.herokuapp.com/",
+                //url: "http://localhost:5000",
                 data: userSubmission
             }).then(response => {
                 const works = response.data.works
