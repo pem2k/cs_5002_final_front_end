@@ -52,6 +52,12 @@ export default function InverseForm(){
             return
         }
 
+         if (userSubmission.number > 100000000000 || userSubmission.mod > 100000000000){
+            setSteps([dashes,"Error, number and modulus must be less than 100 billion", dashes])
+            return
+        }
+
+
         if (!userSubmission.number || !userSubmission.mod ){
             setSteps([dashes,"Error, you must provide a positive numeric value for the number and modulus", dashes])
             return
