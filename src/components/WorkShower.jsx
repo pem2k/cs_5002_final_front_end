@@ -1,19 +1,16 @@
-import React from 'react'
-import { TypeAnimation } from 'react-type-animation'
+import React from "react";
+import "../App.css";
 
 export default function WorkShower({ work }) {
+  const isString = typeof work === "string";
+
   return (
-    <div className="mt-1 d-flex container">
+    <div className="mt-1 d-flex container justify-content-center">
       <div
-        className="container"
+        className="container fade-in"
         style={{ width: "80ch", whiteSpace: "pre-wrap" }}
       >
-        <TypeAnimation
-          sequence={[work]}
-          wrapper="pre"
-          speed={99}
-          cursor={false}
-        />
+        {isString ? <pre>{work}</pre> : work}
       </div>
     </div>
   );

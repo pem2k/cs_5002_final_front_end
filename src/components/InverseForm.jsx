@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../App.css'
 import axios from "axios"
 import WorkShower from "./WorkShower";
 
@@ -8,8 +9,27 @@ export default function InverseForm(){
     const [numberInput, setNumberInput] = useState("");
     const [modInput, setModInput] = useState("");
     const [steps, setSteps] = useState([])
+
     
     const dashes = "--------------------------------------------------------------------------------"
+
+    const btnLinks = (
+        <div>
+            <div className="mb-3">
+                <pre style={{ fontFamily: "monospace" }}>{dashes}</pre>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Modular_multiplicative_inverse" target="_blank" rel="noreferrer">
+            <div className="text-center">
+                <button className="btn btn-dark btn-text mt-0 mb-2 fade-in">Euclidean Algorithm</button>
+            </div>
+        </a>
+            <a href="https://en.wikipedia.org/wiki/Modular_multiplicative_inverse" target="_blank" rel="noreferrer">
+                <div className="text-center">
+                    <button className="btn btn-dark btn-text mt-0 mb-2 fade-in">Modular Multiplicative Inverse</button>
+                </div>
+            </a>
+        </div>)
+
     const submitHandler = (event) => {
         event.preventDefault();
 
@@ -31,7 +51,7 @@ export default function InverseForm(){
         else{
             axios({
                 method: "post",
-                url: "https://modulo-inverse-api-ad08dd8371c5.herokuapp.com/",
+                url: "https://modulo-inverse-api-ad08dd8371c5.herokuapp.com/", //http://localhost:5000,
                 data: userSubmission
             }).then(response => {
                 const works = response.data.works
@@ -41,6 +61,7 @@ export default function InverseForm(){
                 }
 
                 else{
+                    works.unshift(btnLinks)
                     setSteps(works)
                 }
 
@@ -52,13 +73,14 @@ export default function InverseForm(){
         <div>
             <div className="d-flex justify-content-center align-items-center">
             <div>
-                <div >
+                <div>
                         <form onSubmit={submitHandler} className="container">
                             <div className="form-floating mb-2">
                                 <input 
                                     name="number"
                                     placeholder=" "
                                     className="form-control"
+                                    autocomplete="off"
                                     id="Number"onChange={(event) => setNumberInput(event.target.value)} />
 
                                 <label htmlFor="Number">Number</label>
@@ -69,6 +91,7 @@ export default function InverseForm(){
                                     name="mod" 
                                     placeholder=" " 
                                     className="form-control" 
+                                    autocomplete="off"
                                     id="Modulo" 
                                     onChange={(event) => setModInput(event.target.value)} />
 
@@ -77,10 +100,14 @@ export default function InverseForm(){
                             </div>
 
                             <div className=" d-flex justify-content-center">
-                                <button type="submit" className="btn btn-dark btn-text">Calculate</button>
+                                <button type="submit" className="mt-2 btn btn-dark btn-text">Calculate</button>
+                                
                             </div>
+                            
                         </form>
+                        
                 </div>
+                
             </div>
         </div>
 

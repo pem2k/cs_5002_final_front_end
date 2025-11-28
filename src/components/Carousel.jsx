@@ -11,7 +11,7 @@ export default function Carousel() {
                         <div className="jumbotron jumbotron-fluid">
                             <div className="container">
                                 <h1 className="display-4">Inverting Modulo</h1>
-                                <p className="lead">Parker McKillop, Oksana Pooley, Arsh Singh,  </p>
+                                <p className="lead">Parker McKillop, Oksana Pooley, Arsh Singh  </p>
                             </div>
                         </div>
                     </div>
