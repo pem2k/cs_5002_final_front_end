@@ -5,7 +5,7 @@ export default function WorkShower({ work }) {
   const isString = typeof work === "string";
 
   return (
-    <div className="d-flex container justify-content-center">
+    <div className="d-flex container justify-content-center py-0">
       <div
         className="container fade-in"
         style={{ width: "80ch", whiteSpace: "pre-wrap" }}
