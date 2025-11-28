@@ -20,7 +20,7 @@ export default function Home() {
         For a detailed description of the topic, please see Seymour Lipschutz and Marc L Lipson (2022):
         </p>
         <p className="text-left fs-6">
-         “Properties of the Integers”. In: Schaum’s Outline of Discrete Mathematics. 4th ed. Accessed via Northeastern University Library. New York: McGraw Hill, 2022. Chap. 11. url: <a href="https://www.accessengineeringlibrary.com.ezproxy.neu.edu/content/book/9781264258802/chapter/chapter11"></a>https://www.accessengineeringlibrary.com.ezproxy.neu.edu/content/book/9781264258802/chapter/chapter11
+         “Properties of the Integers”. In: Schaum’s Outline of Discrete Mathematics. 4th ed. Accessed via Northeastern University Library. New York: McGraw Hill, 2022. Chap. 11. url: <a href="https://www.accessengineeringlibrary.com.ezproxy.neu.edu/content/book/9781264258802/chapter/chapter11">https://www.accessengineeringlibrary.com.ezproxy.neu.edu/content/book/9781264258802/chapter/chapter11</a>
         </p>
       </div>
       
