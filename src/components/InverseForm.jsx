@@ -127,7 +127,7 @@ export default function InverseForm(){
             </div>
         </div>
 
-        <div className="d-flex flex-column align-items-center my-0">
+        <div className="d-flex flex-column align-items-center my-0 py-0">
                 {steps.map((work, i) => (
                     <WorkShower key={work + i} work={work} />
                 ))}
